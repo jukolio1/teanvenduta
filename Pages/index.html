@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="loginForm" onsubmit="return validateForm(event)">
+        <input type="text" id="username" placeholder="Phone number or email">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit">Log in</button>
+        <ul></ul>
+        <a href="/forgot-password" class="forgot-password-link">Forgot password?</a>
+        <button class="create-account-btn">Create new account</button>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Guardar en localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            // Imprimir en consola para verificar
+            console.log(localStorage.getItem('users'));
+        });
+
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "123456789" && password === "admin123") {
+                // Redirect to lista page
+                window.location.href = 'lista.html';
+                return true;
+            }
+            // Validate phone number or email
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
+            const phoneRegex = /^\+?[0-9]\d{1,14}$/;
+            if (!emailRegex.test(username) && !phoneRegex.test(username)) {
+                alert('Please enter a valid phone number or email.');
+                return false;
+            }
+
+            // Validate password
+            const passwordRegex = /^[a-zA-Z0-9\s\w\p{P}\p{S}]{8,}$/u;
+            if (!passwordRegex.test(password)) {
+                alert('Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
+                return false;
+            }
+
+            // Redirect to home page
+            window.location.href = 'home.html';
+            return true;
+        }
+    </script>
+</body>
+</html>

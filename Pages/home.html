@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTCHA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center">
+        <div>
+            <div class="checkbox-container">
+                <input type="checkbox" class="robot">
+                <label for="robotCheckbox">I'm not a robot</label>
+                <img src="Pages/assets/capcha.png">
+
+            </div>
+            <br><br>
+            <div id="captchaBackground">
+                <canvas id="captcha" width="200" height="100"></canvas>
+                <input id="textBox" type="text" name="text" placeholder="Enter CAPTCHA">
+                <div id="buttons">
+                    <button onclick="submitCaptcha()">Enviar</button>
+                    <button onclick="refreshCaptcha()">Refresh</button>
+                </div>
+            </div>
+            <span id="output"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

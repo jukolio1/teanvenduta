@@ -1,0 +1,189 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #A9E5ED;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: -21px;
+    align-items: center;
+    justify-content: center;
+}
+
+form::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: #3b5998;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px -10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: 106%;
+    padding: 10px;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: -10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d4373;
+}
+
+.create-account-btn {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+    margin-left: 92px;
+}
+
+.create-account-btn:hover {
+    background-color: #2d4373;
+}
+
+.forgot-password-link {
+    margin-left: 105px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+/* Estilos generales */
+
+/* Estilos para el contenedor del checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el checkbox y el texto */
+}
+
+/* Estilos para el checkbox */
+.robot {
+    width: 25px; /* Ajusta el tamaño del checkbox */
+    height: 25px;
+    
+    vertical-align: middle;
+    background-color: #eee;
+    margin-left: 50px;
+}
+
+/* Estilos para el texto del checkbox */
+.checkbox-container label {
+    font-size: 26px; /* Ajusta el tamaño del texto */
+    color: #333;
+    margin-left: 10px; /* Añade un poco de espacio entre el checkbox y el texto */
+}
+
+body {
+    font-family:  'Times New Roman';
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor del CAPTCHA */
+#captchaBackground {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Estilos para el canvas del CAPTCHA */
+#captcha {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el mensaje "No soy un robot" */
+#captchaMessage {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilos para el input del CAPTCHA */
+#textBox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para los botones */
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilos para el mensaje de salida */
+#output {
+    color: #007bff;
+    font-weight: bold;
+}
+.checkbox-image {
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: 30px;
+    border-radius: 5px; /* Añade bordes redondeados a la imagen */
+}
+
+#userList li {
+    border-bottom: 1px solid #000; /* Cambia el color según prefieras */
+    padding: 5px 0; /* Ajusta el espacio arriba y abajo de cada elemento de la lista */
+    margin-bottom: 5px; /* Ajusta el espacio entre cada elemento de la lista */
+}
+
+#userList li:last-child {
+    border-bottom: none; /* Elimina la línea en el último elemento de la lista */
+}
